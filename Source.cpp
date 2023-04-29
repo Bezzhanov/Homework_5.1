@@ -1,75 +1,68 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 
 class Figure {
 
 public:
 	Figure() {
-	
 		Figure::Figure(sides_count, name);
-	
 	};
-	int get_sides_count() {
-		return sides_count;
-	};
+	int get_sides_count() { return this->sides_count; };
 
-	std::string get_name() {
-		return name;
-	};
+	std::string get_name() { return this->name; };
 
 protected:
 	
 	int sides_count = 0;
-	std::string name = "Ôèãóðà";
+	std::string name = "Ð¤Ð¸Ð³ÑƒÑ€Ð°";
 	
 	Figure(int sides_count, std::string name) {
-		this->sides_count;
-		this->name;
+		sides_count = this->sides_count;
+		name = this->name;
 	};
+
 	
 };
+
 class Triangle : public Figure {
 
 public:
-	Triangle() {
-		Triangle::Triangle(sides_count, name);
+	Triangle() {};
 	
-	};
+	int get_sides_count() {return this->sides_count; };
 
-	int get_sides_count() {
-		return sides_count;
-	};
+	std::string get_name() {return this->name;	};
 
-	std::string get_name() {
-		return name;
-	};
-	
 protected:
 		int sides_count = 3;
-		std::string name = "Òðåóãîëüíèê";
+		std::string name = "Ð¢Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸Ðº";
 
 	Triangle(int sides_count, std::string name) : Figure(sides_count, name) {
-			
+		sides_count = this->sides_count;
+		name = this->name;
 	};
 
 };
+
 class Quadrangle : public Figure {
 
 public:
 	Quadrangle() {};
+		
 	int get_sides_count() {
-		return sides_count;
+		return this->sides_count;
 	};
-
 	std::string get_name() {
-		return name;
+		return this->name;
 	}
+		
 protected:
 
 	int sides_count = 4;
-	std::string name = "×åòûðåõóãîëüíèê";
+	std::string name = "Ð§ÐµÑ‚Ñ‹Ñ€ÐµÑ…ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸Ðº";
 	Quadrangle(int sides_count, std::string name) : Figure(sides_count, name) {
-		
+		sides_count = this->sides_count;
+		name = this->name;
 	};
 
 };
@@ -77,11 +70,14 @@ protected:
 int main() {
 	setlocale(LC_ALL, "Ru");
 	Figure f;
-	std::cout << "Êîëè÷åñòâî ñòîðîí: " << std::endl;
+	std::cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ð¾Ñ€Ð¾Ð½: " << std::endl;
 	std::cout << f.get_name() << " : " << f.get_sides_count() << std::endl;
+	
 	Triangle t;
 	std::cout << t.get_name() << " : " << t.get_sides_count() << std::endl;
+	
 	Quadrangle q;
 	std::cout << q.get_name() << " : " << q.get_sides_count() << std::endl;
+	
 	return 0;
 }
