@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 
 
 class Figure {
@@ -20,7 +20,7 @@ public:
 protected:
 	
 	int sides_count = 0;
-	std::string name = "Фигура";
+	std::string name = "Р¤РёРіСѓСЂР°";
 	
 	Figure(int sides_count, std::string name) {
 		this->sides_count;
@@ -46,7 +46,7 @@ public:
 	
 protected:
 		int sides_count = 3;
-		std::string name = "Треугольник";
+		std::string name = "РўСЂРµСѓРіРѕР»СЊРЅРёРє";
 
 	Triangle(int sides_count, std::string name) : Figure(sides_count, name) {
 			
@@ -67,7 +67,7 @@ public:
 protected:
 
 	int sides_count = 4;
-	std::string name = "Четырехугольник";
+	std::string name = "Р§РµС‚С‹СЂРµС…СѓРіРѕР»СЊРЅРёРє";
 	Quadrangle(int sides_count, std::string name) : Figure(sides_count, name) {
 		
 	};
@@ -77,7 +77,7 @@ protected:
 int main() {
 	setlocale(LC_ALL, "Ru");
 	Figure f;
-	std::cout << "Количество сторон: " << std::endl;
+	std::cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕСЂРѕРЅ: " << std::endl;
 	std::cout << f.get_name() << " : " << f.get_sides_count() << std::endl;
 	Triangle t;
 	std::cout << t.get_name() << " : " << t.get_sides_count() << std::endl;
